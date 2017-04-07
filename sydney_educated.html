@@ -7,7 +7,7 @@
 	<!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" /><![endif]-->
 
 	<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
-	<script src="/static/leaflet.utfgrid.js"></script>
+	<script src="http://maps.kelvinism.com/static/leaflet.utfgrid.js"></script>
     <style>
         html, body, #map {
           margin: 0;
@@ -68,11 +68,11 @@
             attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
         });
         
-		var utfGrid = new L.UtfGrid('/sydney_educated/{z}/{x}/{y}.json', {
+		var utfGrid = new L.UtfGrid('http://d2i0kygte2vy0v.cloudfront.net/sydney_educated.mbtiles/{z}/{x}/{y}.json', {
             useJsonP: false
         });
 		
-        var tileslayer = new L.TileLayer('/sydney_educated/{z}/{x}/{y}.png');
+        var tileslayer = new L.TileLayer('http://d2i0kygte2vy0v.cloudfront.net/sydney_educated.mbtiles/{z}/{x}/{y}.png');
         
 		//Use a LayerGroup to group together a TileLayer and our UtfGrid layer
 		//This enables us to toggle them both together in the layers dialog
